@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Train Schedule </title>
+	<meta charset="UTF-8">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"> </script>
+
+	
+
+	<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+	<script>
+  	// Initialize Firebase
+  	var config = {
+    apiKey: "AIzaSyAraXZRb9OtLjEueEU_fMav5PJSyYDCcdY",
+    authDomain: "train-schedule-78076.firebaseapp.com",
+    databaseURL: "https://train-schedule-78076.firebaseio.com",
+    storageBucket: "train-schedule-78076.appspot.com",
+    messagingSenderId: "402935312278"
+  	};
+  	firebase.initializeApp(config);
+	</script>
+
+	
+
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="text-center"> Train Schedule </h1>
+			<h3 class="text-center"> CHOO CHOO </h3>
+
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title"><strong> Current Train Schedule </strong> </h3>
+					</div>
+
+					<div class="panel-body">
+						<table class="table table-hover" id="trainTable">
+							<thread>
+								<tr>
+									<th>Train Name </th>
+									<th>Destination </th>
+									<th> Frquency (min) </th>
+									<th> Next Arrival </th>
+									<th> Minutes Away </th>
+								</tr>
+							</thread>
+							<tbody>
+
+							</tbody>
+
+						</table>
+					</div>
+				</div>
+
+
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title"><strong> Add Train </strong> </h3>
+					</div>
+
+					<div class="panel-body">
+
+						<form>
+							<div class="form-group">
+								<label for=""> Train Name</label>
+								<input type="text" class="form-control" id="trainNameInput">
+
+							</div>
+
+							<div class="form-group">
+								<label for=""> Destination </label>
+								<input type="text" class="form-control" id="destinationInput">
+							</div>
+
+							<div class="form-group">
+								<label for=""> First Train Time (HH:mm - military time) </label>
+								<input type="text" class="form-control" id="trainTimeInput">
+
+							</div>
+
+							<div class="form-group">
+								<label for=""> Frequency (min) </label>
+								<input type="text" class="form-control" id="frequencyInput">
+
+							</div>
+
+							<button type="submit" class="btn btn-primary" id="addTrainBtn">Submit </button>
+
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="C:\Users\jcost\coding\homework\HW-7\Assets\javascript.js"> </script>
+
+</body>
+</html>
+
+
+
